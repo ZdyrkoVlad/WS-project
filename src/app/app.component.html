@@ -1,0 +1,76 @@
+<div class="sticky daisy-navbar bg-base-100 flex flex-row justify-items-center justify-between border-ua">
+    <div>
+        <a class="daisy-btn daisy-btn-ghost normal-case text-xl">Well Software</a>
+    </div>
+    <div>
+        <mat-select value="option1" class="!border-0" class="w-14">
+            <mat-option value="option1">EN</mat-option>
+            <mat-option value="option2">UA</mat-option>
+            <mat-option value="option3">RU</mat-option>
+        </mat-select>
+    </div>
+
+</div>
+<!--<mat-progress-bar-->
+<!--        class="example-margin"-->
+<!--        color="primary"-->
+<!--        mode="indeterminate"-->
+<!--&gt;-->
+<!--</mat-progress-bar>-->
+
+<div class=" parallax lg:flex lg:flex-row lg:justify-end">
+    <div class="m-6  lg:w-1/3 p-4 bg-opacity-90  bg-white  rounded">
+        <h1 class="text-inherit font-serif  my-2">Company Motivation</h1>
+        <div class="text-gray-400 font-sans font-semibold text-justify ">
+            <p>Short description how company base himself. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                pulvinar luctus sem, eget
+                porta orci. Maecenas molestie dui id diam feugiat, eu tincidunt mauris aliquam. Duis commodo vitae
+                ligula et
+                interdum. Maecenas faucibus mattis imperdiet. In rhoncus ac ligula id ultricies.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                pulvinar luctus sem, eget
+                porta orci.</p>
+        </div>
+    </div>
+</div>
+
+<div class=" lg:flex lg:flex-row justify-center">
+    <div class="m-6  lg:w-1/3 p-4 ">
+        <h1 class="text-inherit font-serif  my-2">About Company</h1>
+        <div class="text-gray-400 font-sans font-semibold text-justify ">
+            <p>Short description how company base himself. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                pulvinar luctus sem, eget
+                porta orci. Maecenas molestie dui id diam feugiat, eu tincidunt mauris aliquam. Duis commodo vitae
+                ligula et
+                interdum. Maecenas faucibus mattis imperdiet. In rhoncus ac ligula id ultricies.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                pulvinar luctus sem, eget
+                porta orci.</p>
+        </div>
+    </div>
+</div>
+
+<div class="flex flex-row lg:justify-between lg:mx-14 mt-14 justify-center items-center">
+    <p class="projects-title">Our Projects</p>
+    <img class="cursor-pointer hover:scale-105" [srcset]="titImgSrc" (click)="changeBirdByClick()">
+</div>
+<app-carousel class="mb-8"></app-carousel>
+
+<div class="border-ua lg:mt-12 mt-8"></div>
+<footer class="p-8 ">
+    <div class="flex lg:flex-row flex-col justify-center font-serif  font-medium lg:gap-16 gap-8">
+        <div>
+            <h4>Address</h4>
+            <p>Some cool address street 47/7</p>
+        </div>
+        <div>
+            <h4>Phone</h4>
+            <p>+3801231232*</p>
+        </div>
+
+        <div>
+            <h4>Email</h4>
+            <p>WellSoftware@mail.com</p>
+        </div>
+    </div>
+</footer>

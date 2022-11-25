@@ -1,0 +1,32 @@
+.parallax {
+    /* The image used */
+    background-image: url("src/assets/bird/tit-wallpaper.jpg");
+
+    /* Set a specific height */
+    min-height: 400px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 33px;
+}
+
+h4 {
+    font-weight: 800;
+}
+
+.projects-title{
+    font-weight:500;
+    font-size: 40px;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}

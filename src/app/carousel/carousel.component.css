@@ -1,0 +1,12 @@
+.detail-button-gradient {
+    background-image: linear-gradient(to right, aqua, gold);
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.img-logo-card {
+    width: 250px;
+    height: 150px;
+    background-size: cover;
+}
