@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 :root {
-    color-scheme: light;
+    color-scheme: dark only;
 }
 
 html, body {
@@ -47,4 +47,14 @@ body {
     border-left: none;
     border-right: none;
     border-top: none;
+    /*border-bottom: none;*/
+}
+
+.border-ua-top{
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to right, aqua, gold) 1;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
 }
