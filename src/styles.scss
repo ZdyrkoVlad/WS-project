@@ -1,0 +1,201 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark only;
+  background-color: #F9FCFD;
+}
+
+html, body {
+  height: 100%;
+
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 4px;
+  border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #121428;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
+
+
+.main-colors.yellow {
+  background: #F9E762
+}
+
+.main-colors.text-yellow {
+  color: #F9E762
+}
+
+.main-colors.black {
+  background: #121428;
+}
+
+.main-colors.blue {
+  background: #E9F5FA;
+
+}
+
+.main-colors.white {
+  background: #F9FCFD;
+}
+
+
+.main-container {
+  margin-top: 10px;
+
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+
+  @media screen and (max-width: 420px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+}
+
+
+.first-block {
+  height: 80vh;
+  width: 100%;
+  //h-[80vh] w-full
+  @media screen and (max-width: 1400px) {
+    height: 65vh;
+  }
+}
+
+.card-text {
+  font-family: 'Red Hat Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+}
+
+.nav-logo {
+  height: 70px !important;
+  width: 8vw;
+  min-width: 120px;
+}
+
+ul > li {
+  display: inline-block;
+  font-family: 'Red Hat Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+
+}
+
+li:hover {
+  transform: scale(1.06);
+  transition-duration: 150ms;
+}
+
+@font-face {
+  font-family: "Red Hat Mono";
+  //src: url('assets/font/RedHatMono');
+  src: url('assets/font/RedHatMono-VariableFont_wght.ttf') format('truetype');
+  //url('fonts/fira/woff2/FiraSans-Regular.woff2') format('woff2'),
+  //url('fonts/fira/woff/FiraSans-Regular.woff') format('woff'),
+  //url('fonts/fira/woff2/FiraSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "pixelmix";
+  src: url('assets/font/pixelmix.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.tit-svg {
+  z-index: 10;
+  background-image: url(assets/background.svg);
+  background-size: 88vh;
+  height: 100%;
+  background-repeat: repeat-x;
+}
+
+
+.header-text {
+  font-family: 'Red Hat Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-size: min(46px, 8vw);
+  text-transform: uppercase;
+
+}
+
+.text-card-headers {
+  font-family: 'Red Hat Mono';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 53px;
+}
+
+.button {
+  height: 50px;
+  //width:8vw;
+  border-radius: 5px;
+  min-width: 120px;
+}
+
+.big-button{
+  height: 50px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.button-font {
+  font-family: 'Red Hat Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.pixel-text {
+  font-family: 'pixelmix';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+
+}
+
+.carusel-block {
+  margin-right: 7vw;
+  margin-left: 7vw;
+  @media screen and (max-width: 1400px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+

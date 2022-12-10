@@ -1,19 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 
-const birdImgList: string[] = [
-  'assets/bird/tit-on-branch.png',
-  'assets/bird/tit-on-branch2.png',
-  'assets/bird/tit-on-branch3.png',
-  'assets/bird/tit-on-branch4.png',
-  'assets/bird/tit-on-branch5.png',
-  'assets/bird/tit-fly.png',
-  'assets/bird/tit-fly2.png',
-  'assets/bird/tit-fly3.png',
-  'assets/bird/tit-fly4.png',
-  'assets/bird/tit-fly5.png',
-  'assets/bird/tit-stand.png',
-  'assets/bird/tit-wing-up.png',
-]
+const birdImgList: string[] = []
 
 @Component({
   selector: 'app-root',
@@ -22,9 +9,11 @@ const birdImgList: string[] = [
 })
 export class AppComponent implements OnInit {
   titImgSrc: string = ''
+  activeSection: string = 'AboutUs'
+  menuActive: boolean = false
 
   changeBirdByClick (): void {
-    this.titImgSrc = birdImgList[this.randomIntFromInterval(0, birdImgList.length-1)]
+    this.titImgSrc = birdImgList[this.randomIntFromInterval(0, birdImgList.length - 1)]
   }
 
   randomIntFromInterval (min: number, max: number): number { // min and max included
@@ -32,7 +21,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit (): void {
-    this.titImgSrc = birdImgList[this.randomIntFromInterval(0, birdImgList.length-1)]
+    this.titImgSrc = birdImgList[this.randomIntFromInterval(0, birdImgList.length - 1)]
   }
 
 }

@@ -1,83 +1,157 @@
-<div class="sticky daisy-navbar bg-base-100 flex flex-row justify-items-center justify-between border-ua">
-    <div>
-        <a class="daisy-btn daisy-btn-ghost normal-case text-xl">WellSoft</a>
-    </div>
-    <div>
-        <mat-select value="option1" class="!border-0" class="w-14">
-            <mat-option value="option1">EN</mat-option>
-            <mat-option value="option2">UA</mat-option>
-            <mat-option value="option3">RU</mat-option>
-        </mat-select>
-    </div>
+<div class="main-container h-full">
+    <header class="flex lg:flex-row flex-col justify-between mb-[10px]">
 
-</div>
-<!--<mat-progress-bar-->
-<!--        class="example-margin"-->
-<!--        color="primary"-->
-<!--        mode="indeterminate"-->
-<!--&gt;-->
-<!--</mat-progress-bar>-->
+        <div class="flex lg:justify-start justify-center">
+            <img class="nav-logo" src="assets/nav-logo/tit-color.svg">
+        </div>
 
-<div class=" parallax ">
-    <div class=" lg:justify-between lg:rounded-box lg:grid lg:grid-cols-3 pb-2 gap-y-10  justify-items-center">
-        <div class="mx-6 lg:m-6 p-4 bg-opacity-80  bg-white  rounded " style="max-width: 386px">
-            <h1 class="text-inherit font-serif  my-2">Company Motivation</h1>
-            <div class="text-gray-400 font-sans font-semibold text-justify ">
-                <p>Short description how company base himself. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nam
-                    pulvinar luctus sem, eget
-                    porta orci. Maecenas molestie dui id diam feugiat, eu tincidunt mauris aliquam. Duis commodo vitae
-                    ligula et
-                    interdum. Maecenas faucibus mattis imperdiet. In rhoncus ac ligula id ultricies.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                    pulvinar luctus sem, eget
-                    porta orci.</p>
+        <div class="hidden lg:block flex justify-center">
+            <ul class="flex lg:flex-row gap-10 h-[100%]  items-center">
+                <li class="cursor-pointer" (click)="activeSection='AboutUs'"><a>About us</a></li>
+                <li class="cursor-pointer"><a href="#product-list">Our product</a></li>
+                <li class="cursor-pointer" (click)="activeSection='Motivation'"><a>Motivation</a></li>
+                <li class="cursor-pointer" (click)="activeSection='Contact'"><a>Contact</a></li>
+            </ul>
+        </div>
+
+        <div class=" flex flex-col lg:hidden display justify-center mb-4">
+            <div class=" pixel-text text-center " (click)="menuActive=!menuActive">Menu</div>
+            <ul *ngIf="menuActive" class="flex flex-col gap-2  h-[100%] px-[5vw] items-start">
+                <li (click)="activeSection='AboutUs'"><a href="#">About us</a></li>
+                <li><a href="#product-list">Our product</a></li>
+                <li><a href="#">Motivation</a></li>
+                <li (click)="activeSection='Contact'"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+
+        <div class="flex justify-end items-center">
+            <!--            <mat-select value="option1" class="!border-0" class="w-14">-->
+            <!--                <mat-option value="option1">EN</mat-option>-->
+            <!--                <mat-option value="option2">UA</mat-option>-->
+            <!--                <mat-option value="option3">RU</mat-option>-->
+            <!--            </mat-select>-->
+
+            <div class="hidden lg:block">
+                <div class="absolute pixel bg-black pixel-button-position"></div>
+                <button matRipple class="button main-colors yellow uppercase">
+                    <p class="button-font px-[25px] py-[10px]">Let`s talk</p></button>
             </div>
-        </div>
 
-        <div></div>
-        <!--        <div class=" lg:flex lg:flex-row ">-->
-        <div class="m-6  p-4 bg-opacity-80  bg-white  rounded" style="max-width: 386px">
-            <h1 class="text-inherit font-serif  my-2">About Company</h1>
-            <div class="text-gray-400 font-sans font-semibold text-justify ">
-                <p>Short description how company base himself. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nam
-                    pulvinar luctus sem, eget
-                    porta orci. Maecenas molestie dui id diam feugiat, eu tincidunt mauris aliquam. Duis commodo vitae
-                    ligula et
-                    interdum. Maecenas faucibus mattis imperdiet. In rhoncus ac ligula id ultricies.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                    pulvinar luctus sem, eget
-                    porta orci.</p>
+            <div class="lg:hidden block w-full px-[5vw]">
+                <div class="absolute pixel bg-black pixel-button-position"></div>
+                <button matRipple class="big-button main-colors yellow uppercase">
+                    <p class="button-font px-[25px] py-[10px]">Let`s talk</p></button>
             </div>
-            <!--            </div>-->
+
+
         </div>
+
+
+    </header>
+
+    <div class="first-block main-colors blue lg:mb-[100px] mb-[40px] rounded-[5px]">
+
+        <div *ngIf="activeSection==='AboutUs'" class="tit-svg flex flex-col w-full justify-center text-center ">
+
+            <div class="pixel-text mb-[40px]">WellSoft_</div>
+            <div class="flex flex-row justify-center  ">
+                <div class="header-text mb-[10px] max-w-[600px]">
+                    Custom Software
+                    Development
+                </div>
+            </div>
+            <div class="flex flex-row justify-center">
+                <div class=" main-text card-text lg:pd-0 px-6 mb-[50px] max-w-[700px] ">We provide custom software
+                    development and IT
+                    outsourcing services. Our developers
+                    build custom software for individuals, startups, and small to medium business.
+                </div>
+            </div>
+
+            <div>
+                <button matRipple class="button main-colors black uppercase"><p
+                        class="button-font main-colors text-yellow px-[25px] py-[10px]">Let`s talk</p></button>
+            </div>
+
+        </div>
+
+        <div *ngIf="activeSection==='Motivation'" class="tit-svg flex flex-col w-full justify-center text-center ">
+
+            <div class="pixel-text mb-[40px]">Motivation</div>
+
+            <div class="flex flex-row justify-center">
+                <div class=" main-text card-text lg:pd-0 px-6 mb-[50px] max-w-[700px] ">
+                    We provide custom software
+                    development and IT
+                    outsourcing services. Our developers
+                    build custom software for individuals, startups, and small to medium business.
+                </div>
+            </div>
+
+            <div>
+                <button matRipple class="button main-colors black uppercase"><p
+                        class="button-font main-colors text-yellow px-[25px] py-[10px]">Let`s talk</p></button>
+            </div>
+
+        </div>
+
+        <div *ngIf="activeSection==='Contact'" class="tit-svg flex flex-col w-full justify-center text-center ">
+
+            <div class="pixel-text mb-[40px]">Contact</div>
+            <div class="flex flex-row justify-center">
+                <div class=" main-text card-text lg:pd-0 px-6 mb-[50px] max-w-[700px] ">
+                    <div class="flex  flex-col justify-center gap-8">
+                        <div>
+                            <h4>Address</h4>
+                            <p>Some cool address street 47/7</p>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+3801231232*</p>
+                        </div>
+
+                        <div>
+                            <h4>Email</h4>
+                            <p>WellSoftware@mail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <button matRipple class="button main-colors black uppercase"><p
+                        class="button-font main-colors text-yellow px-[25px] py-[10px]">Let`s talk</p></button>
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="flex flex-row lg:justify-between lg:mx-14 lg:mt-14 justify-center items-center">
-        <p class="projects-title " style="text-shadow: 0 0 3px #0a0707, 0 0 5px #0a0707; color:white">Our Projects</p>
-        <!--        <img class="cursor-pointer hover:scale-105" [srcset]="titImgSrc" (click)="changeBirdByClick()">-->
+
+    <div class="lg:pb-[60px] pb-6 carusel-block" id="product-list">
+        <div class="mx-2">
+            <div class="pixel-text mb-[30px]">We_Create_</div>
+            <div class="header-text uppercase mb-[30px]">Our products</div>
+        </div>
+        <app-carousel></app-carousel>
     </div>
-    <app-carousel class="mb-8"></app-carousel>
 </div>
 
+<!--<footer class="p-4">-->
+<!--    <div class="flex lg:flex-row flex-col justify-center font-serif  font-medium lg:gap-16 gap-8">-->
+<!--        <div>-->
+<!--            <h4>Address</h4>-->
+<!--            <p>Some cool address street 47/7</p>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <h4>Phone</h4>-->
+<!--            <p>+3801231232*</p>-->
+<!--        </div>-->
 
-<!--<div class="border-ua lg:mt-12 mt-8"></div>-->
-<div class="border-ua-top "></div>
-<footer class="p-4">
-    <div class="flex lg:flex-row flex-col justify-center font-serif  font-medium lg:gap-16 gap-8">
-        <div>
-            <h4>Address</h4>
-            <p>Some cool address street 47/7</p>
-        </div>
-        <div>
-            <h4>Phone</h4>
-            <p>+3801231232*</p>
-        </div>
-
-        <div>
-            <h4>Email</h4>
-            <p>WellSoftware@mail.com</p>
-        </div>
-    </div>
-</footer>
+<!--        <div>-->
+<!--            <h4>Email</h4>-->
+<!--            <p>WellSoftware@mail.com</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</footer>-->
