@@ -11,6 +11,9 @@ export class AppComponent implements OnInit {
   titImgSrc: string = ''
   activeSection: string = 'AboutUs'
   menuActive: boolean = false
+  languageActivate: boolean = false
+
+  language: string = 'EN'
 
   changeBirdByClick (): void {
     this.titImgSrc = birdImgList[this.randomIntFromInterval(0, birdImgList.length - 1)]
@@ -22,6 +25,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit (): void {
     this.titImgSrc = birdImgList[this.randomIntFromInterval(0, birdImgList.length - 1)]
+  }
+
+  changeLanguage (language: string): void {
+    this.language = language
   }
 
 }
