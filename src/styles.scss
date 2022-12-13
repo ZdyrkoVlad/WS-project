@@ -4,8 +4,10 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark only;
   background-color: #F9FCFD;
+  @media (prefers-color-scheme: dark) {
+    color: black;
+  }
 }
 
 html, body {
