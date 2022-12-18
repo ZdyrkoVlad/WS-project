@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { TranslateService } from '@ngx-translate/core'
 
 const birdImgList: string[] = []
 
@@ -15,6 +16,12 @@ export class AppComponent implements OnInit {
 
   language: string = 'EN'
 
+  constructor(private translate: TranslateService) {
+    translate.addLangs(['en', 'ru', 'ua']);
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
+
   changeBirdByClick (): void {
     this.titImgSrc = birdImgList[this.randomIntFromInterval(0, birdImgList.length - 1)]
   }
@@ -29,6 +36,9 @@ export class AppComponent implements OnInit {
 
   changeLanguage (language: string): void {
     this.language = language
+
+    this.translate.use(language.toLowerCase());
+
   }
 
 }

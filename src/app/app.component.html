@@ -7,10 +7,19 @@
 
         <div class="hidden lg:block flex justify-center">
             <ul class="flex lg:flex-row gap-10 h-[100%]  items-center">
-                <li class="cursor-pointer" (click)="activeSection='AboutUs'"><a>About us</a></li>
-                <li class="cursor-pointer"><a href="#product-list">Our product</a></li>
-                <li class="cursor-pointer" (click)="activeSection='Motivation'"><a>Motivation</a></li>
-                <li class="cursor-pointer" (click)="activeSection='Contact'"><a>Contact</a></li>
+                <li class="cursor-pointer" (click)="activeSection='AboutUs'"
+                    [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }">
+                    <a>{{ "MENU.ABOUT_US" | translate }}</a>
+                </li>
+                <li class="cursor-pointer" [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }"><a
+                        href="#product-list">{{ "MENU.OUR_PRODUCT" | translate }}</a></li>
+                <li class="cursor-pointer" (click)="activeSection='Motivation'"
+                    [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }">
+                    <a>{{ "MENU.MOTIVATION" | translate }}</a></li>
+                <li class="cursor-pointer" (click)="activeSection='Contact'"
+                    [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }">
+                    <a>{{ "MENU.CONTACT" | translate }}</a>
+                </li>
             </ul>
             <div class="absolute language-text top-[35px] right-[15vw] cursor-pointer"
                  (click)="languageActivate=!languageActivate">{{language}}
@@ -27,10 +36,15 @@
         <div class=" flex flex-col lg:hidden display justify-center mb-4">
             <div class=" pixel-text text-center "><p (click)="menuActive=!menuActive">Menu</p></div>
             <ul *ngIf="menuActive" class="flex flex-col gap-2  h-[100%] px-[5vw] items-start">
-                <li (click)="activeSection='AboutUs'"><a>About us</a></li>
-                <li><a href="#product-list">Our product</a></li>
-                <li (click)="activeSection='Motivation'"><a>Motivation</a></li>
-                <li (click)="activeSection='Contact'"><a>Contact</a></li>
+                <li (click)="activeSection='AboutUs'"
+                    [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }"><a>{{ "MENU.ABOUT_US" | translate }}</a></li>
+                <li><a href="#product-list"
+                       [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }">{{ "MENU.OUR_PRODUCT" | translate }}</a>
+                </li>
+                <li (click)="activeSection='Motivation'"
+                    [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }"><a>{{ "MENU.MOTIVATION" | translate }}</a></li>
+                <li (click)="activeSection='Contact'"
+                    [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }"><a>{{ "MENU.CONTACT" | translate }}</a></li>
                 <div class=" language-text cursor-pointer"
                      (click)="languageActivate=!languageActivate">{{language}}
                     <div class="bg-blue-50 p-2 border" *ngIf="languageActivate">

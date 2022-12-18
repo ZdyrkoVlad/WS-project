@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
+import { HttpClientModule, HttpClient } from '@angular/common/http'
 
 import { AppComponent } from './app.component'
 import { CarouselComponent } from './carousel/carousel.component'
@@ -7,6 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatSelectModule } from '@angular/material/select'
 import { MatButtonModule } from '@angular/material/button'
 import { MatRippleModule } from '@angular/material/core'
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core'
+import { TranslateHttpLoader } from '@ngx-translate/http-loader'
+
+export function HttpLoaderFactory (http: HttpClient) {
+  return new TranslateHttpLoader(http)
+}
 
 @NgModule({
   declarations: [
@@ -18,7 +25,15 @@ import { MatRippleModule } from '@angular/material/core'
     BrowserAnimationsModule,
     MatSelectModule,
     MatButtonModule,
-    MatRippleModule
+    MatRippleModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
