@@ -30,8 +30,8 @@ export function HttpLoaderFactory (http: HttpClient) {
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
+        useFactory: httpTranslateLoader,
+        deps: [HttpClient],
       }
     })
   ],
@@ -39,3 +39,7 @@ export function HttpLoaderFactory (http: HttpClient) {
   bootstrap: [AppComponent]
 })
 export class AppModule {}
+
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
+}
