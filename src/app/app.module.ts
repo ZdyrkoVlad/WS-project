@@ -9,7 +9,8 @@ import { MatSelectModule } from '@angular/material/select'
 import { MatButtonModule } from '@angular/material/button'
 import { MatRippleModule } from '@angular/material/core'
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core'
-import { TranslateHttpLoader } from '@ngx-translate/http-loader'
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { FooterComponent } from './footer/footer.component'
 
 export function HttpLoaderFactory (http: HttpClient) {
   return new TranslateHttpLoader(http)
@@ -19,6 +20,7 @@ export function HttpLoaderFactory (http: HttpClient) {
   declarations: [
     AppComponent,
     CarouselComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

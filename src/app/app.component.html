@@ -1,230 +1,293 @@
-<div class="main-container h-full">
-    <header class="flex lg:flex-row flex-col justify-between mb-[10px]">
+<div class="main-container ">
+  <header class="flex lg:flex-row flex-col justify-between mb-[10px]">
 
-        <div class="flex lg:justify-start justify-center">
-            <img class="nav-logo" src="assets/nav-logo/tit-color.svg">
-        </div>
+    <div class="flex lg:justify-start justify-center">
+      <img class="nav-logo" src="assets/nav-logo/tit-color.svg">
+    </div>
 
-        <div class="hidden lg:block flex justify-center">
-            <ul class="flex lg:flex-row gap-10 h-[100%]  items-center">
-                <li class="cursor-pointer" (click)="activeSection='AboutUs'"
-                    [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }">
-                    <a>{{ "MENU.ABOUT_US" | translate }}</a>
-                </li>
-                <li class="cursor-pointer" [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }"><a
-                        href="#product-list">{{ "MENU.OUR_PRODUCT" | translate }}</a></li>
-                <li class="cursor-pointer" (click)="activeSection='Motivation'"
-                    [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }">
-                    <a>{{ "MENU.MOTIVATION" | translate }}</a></li>
-                <li class="cursor-pointer" (click)="activeSection='Contact'"
-                    [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }">
-                    <a>{{ "MENU.CONTACT" | translate }}</a>
-                </li>
-            </ul>
-            <div class="absolute language-text top-[35px] right-[15vw] cursor-pointer"
-                 (click)="languageActivate=!languageActivate">{{language}}
-                <div class="bg-blue-50 p-2 border" *ngIf="languageActivate">
+    <div class="hidden lg:block flex justify-center">
+      <ul class="flex lg:flex-row gap-10 h-[100%]  items-center">
+        <li class="cursor-pointer" (click)="activeSection='AboutUs'"
+            [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }">
+          <a>{{ "MENU.ABOUT_US" | translate }}</a>
+        </li>
+        <li class="cursor-pointer" [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }"><a
+          href="#product-list">{{ "MENU.OUR_PRODUCT" | translate }}</a></li>
+        <li class="cursor-pointer" (click)="activeSection='Motivation'"
+            [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }">
+          <a>{{ "MENU.MOTIVATION" | translate }}</a></li>
+        <li class="cursor-pointer" [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }">
+          <a href="#contact">{{ "MENU.CONTACT" | translate }}</a>
+        </li>
+      </ul>
+      <div class="absolute language-text top-[35px] right-[15vw] cursor-pointer"
+           (click)="languageActivate=!languageActivate">{{language}}
+        <div class="bg-blue-50 p-2 border" *ngIf="languageActivate">
 
-                    <div class="language-text" (click)="changeLanguage('EN')">EN</div>
-                    <div class="language-text" (click)="changeLanguage('UA')">UA</div>
-                    <div class="language-text" (click)="changeLanguage('RU')">RU</div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class=" flex flex-col lg:hidden display justify-center mb-4">
-            <div class=" pixel-text text-center "><p (click)="menuActive=!menuActive">Menu</p></div>
-            <ul *ngIf="menuActive" class="flex flex-col gap-2  h-[100%] px-[5vw] items-start">
-                <li (click)="activeSection='AboutUs'"
-                    [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }"><a>{{ "MENU.ABOUT_US" | translate }}</a></li>
-                <li><a href="#product-list"
-                       [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }">{{ "MENU.OUR_PRODUCT" | translate }}</a>
-                </li>
-                <li (click)="activeSection='Motivation'"
-                    [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }"><a>{{ "MENU.MOTIVATION" | translate }}</a></li>
-                <li (click)="activeSection='Contact'"
-                    [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }"><a>{{ "MENU.CONTACT" | translate }}</a></li>
-                <div class=" language-text cursor-pointer"
-                     (click)="languageActivate=!languageActivate">{{language}}
-                    <div class="bg-blue-50 p-2 border" *ngIf="languageActivate">
-
-                        <div class="language-text" (click)="changeLanguage('EN')">EN</div>
-                        <div class="language-text" (click)="changeLanguage('UA')">UA</div>
-                        <div class="language-text" (click)="changeLanguage('RU')">RU</div>
-
-                    </div>
-                </div>
-            </ul>
-        </div>
-
-
-        <!--            <mat-select value="option1" class="!border-0" class="w-14">-->
-        <!--                <mat-option value="option1">EN</mat-option>-->
-        <!--                <mat-option value="option2">UA</mat-option>-->
-        <!--                <mat-option value="option3">RU</mat-option>-->
-        <!--            </mat-select>-->
-
-        <div class="flex justify-end items-center">
-
-            <div class="hidden lg:block">
-                <div class="absolute pixel bg-black pixel-button-position"></div>
-                <button matRipple class="button main-colors yellow uppercase">
-                    <p class="button-font px-[25px] py-[10px]">Let`s talk</p></button>
-            </div>
-
-            <div class="lg:hidden block w-full px-[5vw]">
-                <div class="absolute pixel bg-black pixel-button-position"></div>
-                <button matRipple class="big-button main-colors yellow uppercase">
-                    <p class="button-font px-[25px] py-[10px]">Let`s talk</p></button>
-            </div>
-
+          <div class="language-text" (click)="changeLanguage('EN')">EN</div>
+          <div class="language-text" (click)="changeLanguage('UA')">UA</div>
+          <div class="language-text" (click)="changeLanguage('RU')">RU</div>
 
         </div>
+      </div>
+    </div>
 
+    <div class=" flex flex-col lg:hidden display justify-center mb-4">
+      <div class=" pixel-text text-center "><p (click)="menuActive=!menuActive">Menu</p></div>
+      <ul *ngIf="menuActive" class="flex flex-col gap-2  h-[100%] px-[5vw] items-start">
+        <li (click)="activeSection='AboutUs'"
+            [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }">
+          <a>{{ "MENU.ABOUT_US" | translate }}</a></li>
+        <li><a href="#product-list"
+               [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }">{{ "MENU.OUR_PRODUCT" | translate }}</a>
+        </li>
+        <li (click)="activeSection='Motivation'"
+            [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }">
+          <a>{{ "MENU.MOTIVATION" | translate }}</a></li>
+        <li [ngClass]="{'consolas-text-Style':language=='UA'|| language=='RU' }"><a
+          href="#contact">{{ "MENU.CONTACT" | translate }}</a>
+        </li>
+        <div class=" language-text cursor-pointer"
+             (click)="languageActivate=!languageActivate">{{language}}
+          <div class="bg-blue-50 p-2 border" *ngIf="languageActivate">
 
-    </header>
-    <!--    lg:mb-[100px] mb-[40px]-->
-    <div class="first-block main-colors blue  rounded-[5px]">
+            <div class="language-text" (click)="changeLanguage('EN')">EN</div>
+            <div class="language-text" (click)="changeLanguage('UA')">UA</div>
+            <div class="language-text" (click)="changeLanguage('RU')">RU</div>
 
-        <div *ngIf="activeSection==='AboutUs'" class="tit-svg flex flex-col w-full justify-center text-center ">
-
-            <div class="pixel-text mb-[40px]">WellSoft_</div>
-            <div class="flex flex-row justify-center  ">
-                <div class="header-text mb-[10px] max-w-[600px]">
-                    Custom Software
-                    Development
-                </div>
-            </div>
-            <div class="flex flex-row justify-center">
-                <div class=" main-text card-text lg:pd-0 px-6 mb-[50px] max-w-[700px] ">We provide custom software
-                    development and IT
-                    outsourcing services. Our developers
-                    build custom software for individuals, startups, and small to medium business.
-                </div>
-            </div>
-
-            <div>
-                <button matRipple class="button main-colors black uppercase"><p
-                        class="button-font main-colors text-yellow px-[25px] py-[10px]">Let`s talk</p></button>
-            </div>
-
+          </div>
         </div>
+      </ul>
+    </div>
 
-        <div *ngIf="activeSection==='Motivation'" class="tit-svg flex flex-col w-full justify-center text-center ">
 
-            <div class="pixel-text mb-[40px]">Motivation</div>
+    <!--            <mat-select value="option1" class="!border-0" class="w-14">-->
+    <!--                <mat-option value="option1">EN</mat-option>-->
+    <!--                <mat-option value="option2">UA</mat-option>-->
+    <!--                <mat-option value="option3">RU</mat-option>-->
+    <!--            </mat-select>-->
 
-            <div class="flex flex-row justify-center">
-                <div class=" main-text card-text lg:pd-0 px-6 mb-[50px] max-w-[700px] ">
-                    We provide custom software
-                    development and IT
-                    outsourcing services. Our developers
-                    build custom software for individuals, startups, and small to medium business.
-                </div>
-            </div>
+    <div class="flex justify-end items-center cursor-pointer">
 
-            <div>
-                <button matRipple class="button main-colors black uppercase"><p
-                        class="button-font main-colors text-yellow px-[25px] py-[10px]">Let`s talk</p></button>
-            </div>
+      <div class="hidden lg:block button-anim">
+        <!--        <div matRipple class="absolute pixel button-anim-pixel bg-black pixel-button-position">-->
+        <!--          <p class="button-font button-anim-text uppercase px-[20px] py-[13px] z-50">Let`s talk</p>-->
+        <!--        </div>-->
+        <button matRipple class="absolute pixel button-anim-pixel bg-black pixel-button-position">
+          <p class="button-font button-anim-text uppercase px-[20px] py-[13px] z-50">Let`s talk</p>
+        </button>
 
-        </div>
+        <button matRipple class="button main-colors yellow uppercase">
+          <p class="button-font px-[20px] py-[10px] z-50">Let`s talk</p>
+        </button>
+      </div>
 
-        <div *ngIf="activeSection==='Contact'" class="tit-svg flex flex-col w-full justify-center text-center ">
+      <!--      <button class="btn btn&#45;&#45;animation-from-right">-->
+      <!--        <span class="btn__text-static button-font">Let`s talk</span>-->
+      <!--        <div class="btn__text-dynamic">-->
+      <!--          <span class="btn__text-dynamic-inner button-font">Let`s talk</span>-->
+      <!--        </div>-->
+      <!--      </button>-->
 
-            <div class="pixel-text mb-[40px]">Contact</div>
-            <div class="flex flex-row justify-center">
-                <div class=" main-text card-text lg:pd-0 px-6 mb-[50px] max-w-[700px] ">
-                    <div class="flex  flex-col justify-center gap-8">
-                        <div>
-                            <h4>Address</h4>
-                            <p>Some cool address street 47/7</p>
-                        </div>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+3801231232*</p>
-                        </div>
+      <div class="lg:hidden block w-full px-[5vw]">
+        <div class="absolute pixel bg-black pixel-button-position"></div>
+        <button matRipple class="big-button main-colors yellow uppercase">
+          <p class="button-font px-[25px] py-[10px]">Let`s talk</p></button>
+      </div>
 
-                        <div>
-                            <h4>Email</h4>
-                            <p>WellSoftware@mail.com</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <button matRipple class="button main-colors black uppercase"><p
-                        class="button-font main-colors text-yellow px-[25px] py-[10px]">Let`s talk</p></button>
-            </div>
-
-        </div>
 
     </div>
 
 
-    <div class="lg:pb-[60px] pb-6 carusel-block" id="product-list">
+  </header>
+  <!--    lg:mb-[100px] mb-[40px]-->
+  <div class="first-block main-colors blue  rounded-[5px]">
 
-        <div class="flex flex-row">
-            <div class="mx-2  lg:mt-[100px] mt-[40px] w-full ">
-                <div class="pixel-text mb-[30px]">We_Create_</div>
-                <div class="header-text uppercase mb-[30px]">Our products</div>
-            </div>
+    <div *ngIf="activeSection==='AboutUs'" class="tit-svg flex flex-col w-full justify-center text-center ">
 
-            <div class="pixels-plural  flex flex-row justify-between w-full">
-                <div class="lg:block hidden">
-                    <div class="pixel-div inline-block">
-                    </div>
-
-                    <div class="pixel-div inline-block">
-
-                    </div>
-
-                    <div class="pixel-div ml-[20px] mt-[-7px]">
-                    </div>
-                    <div class="pixel-div mt-[4vh]">
-                    </div>
-                    <div class="pixel-div ml-[8vw]">
-                    </div>
-                    <div class="pixel-div ml-[4vw]">
-                    </div>
-                </div>
-
-                <div>
-                    <div class="pixel-div ">
-                    </div>
-                    <div class="pixel-div mt-[5vh]">
-                    </div>
-                    <div class="pixel-div ml-[4vw]">
-                    </div>
-                </div>
-
-                <div class="lg:block hidden">
-
-                    <div>
-                        <div class="pixel-div ">
-                        </div>
-                        <div class="pixel-div ml-[20px]">
-                        </div>
-                        <div class="pixel-div">
-                        </div>
-
-                    </div>
-
-
-                    <div class="pixel-div ">
-                    </div>
-                </div>
-
-                <div>
-                    <div class="pixel-div ">
-                    </div>
-                    <div class="pixel-div ml-4">
-                    </div>
-                </div>
-            </div>
+      <div class="pixel-text mb-[40px]">WellSoft_</div>
+      <div class="flex flex-row justify-center  ">
+        <div class="header-text mb-[10px] max-w-[600px]">
+          Custom Software
+          Development
         </div>
-        <app-carousel></app-carousel>
+      </div>
+      <div class="flex flex-row justify-center">
+        <div class=" main-text card-text lg:pd-0 px-6 mb-[50px] max-w-[700px] ">We provide custom software
+          development and IT
+          outsourcing services. Our developers
+          build custom software for individuals, startups, and small to medium business.
+        </div>
+      </div>
+
+      <div>
+        <button matRipple class="button main-colors black uppercase"><p
+          class="button-font main-colors text-yellow px-[25px] py-[10px]">Let`s talk</p></button>
+      </div>
+
     </div>
+
+    <div *ngIf="activeSection==='Motivation'" class="tit-svg flex flex-col w-full justify-center text-center ">
+
+      <div class="pixel-text mb-[40px]">Motivation</div>
+
+      <div class="flex flex-row justify-center">
+        <div class=" main-text card-text lg:pd-0 px-6 mb-[50px] max-w-[700px] ">
+          We provide custom software
+          development and IT
+          outsourcing services. Our developers
+          build custom software for individuals, startups, and small to medium business.
+        </div>
+      </div>
+
+      <div>
+        <button matRipple class="button main-colors black uppercase"><p
+          class="button-font main-colors text-yellow px-[25px] py-[10px]">Let`s talk</p></button>
+      </div>
+
+    </div>
+
+    <div *ngIf="activeSection==='Contact'" class="tit-svg flex flex-col w-full justify-center text-center ">
+
+      <div class="pixel-text mb-[40px]">Contact WellSoft</div>
+      <div class="flex flex-row justify-center">
+        <div class=" main-text card-text lg:pd-0 px-6 mb-[50px] max-w-[700px] ">
+          <div class="flex  flex-col justify-center gap-8">
+            <div>
+              <h4>Address</h4>
+              <p>Some cool address street 47/7</p>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              <p>+3801231232*</p>
+            </div>
+
+            <div>
+              <h4>Email</h4>
+              <p>WellSoftware@mail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button matRipple class="button main-colors black uppercase"><p
+          class="button-font main-colors text-yellow px-[25px] py-[10px]">Let`s talk</p></button>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="lg:pb-[60px] pb-6 carusel-block" id="product-list">
+
+    <div class="flex flex-row">
+      <div class="mx-2  lg:mt-[100px] mt-[40px] w-full ">
+        <div class="pixel-text mb-[30px]">We_Create_</div>
+        <div class="header-text uppercase mb-[30px]">Our products</div>
+      </div>
+
+      <div class="pixels-plural  flex flex-row justify-between w-full">
+        <div class="lg:block hidden">
+          <div class="pixel-div inline-block">
+          </div>
+
+          <div class="pixel-div inline-block">
+
+          </div>
+
+          <div class="pixel-div ml-[20px] mt-[-7px]">
+          </div>
+          <div class="pixel-div mt-[4vh]">
+          </div>
+          <div class="pixel-div ml-[8vw]">
+          </div>
+          <div class="pixel-div ml-[4vw]">
+          </div>
+        </div>
+
+        <div>
+          <div class="pixel-div ">
+          </div>
+          <div class="pixel-div mt-[5vh]">
+          </div>
+          <div class="pixel-div ml-[4vw]">
+          </div>
+        </div>
+
+        <div class="lg:block hidden">
+
+          <div>
+            <div class="pixel-div ">
+            </div>
+            <div class="pixel-div ml-[20px]">
+            </div>
+            <div class="pixel-div">
+            </div>
+
+          </div>
+
+
+          <div class="pixel-div ">
+          </div>
+        </div>
+
+        <div>
+          <div class="pixel-div ">
+          </div>
+          <div class="pixel-div ml-4">
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-carousel></app-carousel>
+
+  </div>
+
 </div>
+<div class="pixels-plural  flex flex-row justify-between w-full">
+  <div class="lg:block hidden ">
+
+
+    <div class="pixel-div-yellow  ml-[20px] mt-[-7px]">
+    </div>
+    <div class="pixel-div-yellow ml-[7vw] mt-[4vh]">
+    </div>
+    <div class="pixel-div-yellow ml-[5vw]">
+    </div>
+    <div class="pixel-div-yellow ml-[4vw]">
+    </div>
+  </div>
+
+  <div>
+    <div class="pixel-div-yellow ">
+    </div>
+    <div class="pixel-div-yellow mt-[5vh]">
+    </div>
+    <div class="pixel-div-yellow ml-[4vw]">
+    </div>
+  </div>
+
+  <div class="">
+
+    <div>
+      <div class="pixel-div-yellow ">
+      </div>
+      <div class="pixel-div-yellow ml-[20px]">
+      </div>
+      <div class="pixel-div-yellow">
+      </div>
+
+    </div>
+
+
+    <div class="pixel-div-yellow ">
+    </div>
+  </div>
+
+  <div>
+
+  </div>
+</div>
+<app-footer style="weight:100vw important;" id="contact"></app-footer>
